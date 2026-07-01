@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_script"]
+[ext_resource type="Script" path="res://scripts/water_bg.gd" id="6_water"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="3_hud"]
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="4_spawner"]
+[ext_resource type="PackedScene" path="res://scenes/bullets/tariff_bullet.tscn" id="5_bullet"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 320.0
+offset_bottom = 480.0
+color = Color(0.05, 0.08, 0.18, 1)
+script = ExtResource("6_water")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(160, 400)
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("4_spawner")
+bullet_scene = ExtResource("5_bullet")
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
+
+[node name="DifficultyTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = false
+
+[node name="ScoreTimer" type="Timer" parent="."]
+wait_time = 1.0
+autostart = false
+
+[node name="DeliveryTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = false

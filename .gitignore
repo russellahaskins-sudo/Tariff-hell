@@ -1,0 +1,7 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Exported builds (GitHub builds these for us)
+/build/
+/exports/

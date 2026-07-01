@@ -1,0 +1,93 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_script"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SCORE: 0"
+
+[node name="DifficultyLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "TRADE WAR LV. 1"
+
+[node name="GoLabel" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -40.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "GO DELIVER THE GOODS!"
+horizontal_alignment = 1
+visible = false
+
+[node name="BossBarBG" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.0
+offset_top = 70.0
+offset_right = 104.0
+offset_bottom = 84.0
+grow_horizontal = 2
+color = Color(0.15, 0.15, 0.15, 0.8)
+visible = false
+
+[node name="BossBar" type="ColorRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 72.0
+offset_right = 100.0
+offset_bottom = 82.0
+grow_horizontal = 2
+color = Color(0.8, 0.15, 0.15, 1)
+visible = false
+
+[node name="BossLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 84.0
+offset_right = 100.0
+offset_bottom = 98.0
+grow_horizontal = 2
+text = "ICE AGENT  100/100"
+horizontal_alignment = 1
+visible = false
+
+[node name="ShootLabel" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -28.0
+offset_right = 80.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "SPACE TO FIRE CARGO!"
+horizontal_alignment = 1
+visible = false
