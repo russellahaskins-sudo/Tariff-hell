@@ -1,7 +1,7 @@
 extends Control
 
 func _start_game(max_lives_val: int) -> void:
-	GameManager.current_level = 2
+	GameManager.current_level = 0
 	GameManager.max_lives = max_lives_val
 	GameManager.lives = max_lives_val
 	GameManager.score = 0
